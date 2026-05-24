@@ -1442,3 +1442,92 @@ section img:not(.qa-specs-card img):not(.about-meta img) {
   padding: 16px 20px;
   min-width: 90px;
 }
+
+
+/* ============================================================
+   ios.css — iOS page specific additions
+   Requires style.css + sections-addon.css already loaded
+   ============================================================ */
+
+/* ── REQUIREMENTS CHECKLIST ─────────────────────────────────── */
+.req-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 8px;
+}
+
+.req-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--speed), background var(--speed);
+}
+
+.req-item:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+}
+
+.req-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-top: 2px;
+}
+
+.req-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.req-detail strong {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.req-detail span {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.req-detail a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--speed);
+}
+
+.req-detail a:hover {
+  color: var(--accent-2);
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .req-item {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .req-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
