@@ -952,3 +952,493 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* ============================================================
+   SummerSagaMods — New Sections Addon CSS
+   Paste this AFTER your existing style.css closes
+   All variables inherit from :root in style.css
+   ============================================================ */
+
+/* ── QUICK ANSWER SECTION ───────────────────────────────────── */
+.quick-answer {
+  padding-block: clamp(64px, 10vw, 110px);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.qa-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-top: 40px;
+}
+
+/* Left column — specs card */
+.qa-specs-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: calc(var(--header-h) + 16px);
+}
+
+.qa-specs-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-3);
+}
+
+/* App info table */
+.app-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.app-info-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background var(--speed);
+}
+
+.app-info-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.app-info-table tbody tr:hover {
+  background: var(--bg-3);
+}
+
+.app-info-table th {
+  padding: 10px 16px;
+  text-align: left;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  white-space: nowrap;
+  width: 42%;
+  vertical-align: middle;
+}
+
+.app-info-table td {
+  padding: 10px 16px;
+  color: var(--text);
+  font-size: 0.875rem;
+  vertical-align: middle;
+  line-height: 1.4;
+}
+
+.qa-specs-card .btn {
+  margin: 16px;
+  margin-top: 4px;
+}
+
+/* Right column — summary */
+.qa-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.qa-summary h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.qa-summary p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.qa-summary strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.qa-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.qa-trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: var(--accent-soft);
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+/* ── TABLE OF CONTENTS ──────────────────────────────────────── */
+.toc-section {
+  padding-block: 40px 48px;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.toc-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  counter-reset: toc-counter;
+}
+
+.toc-list li {
+  counter-increment: toc-counter;
+}
+
+.toc-list a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  transition: color var(--speed), padding-left var(--speed);
+}
+
+.toc-list a::before {
+  content: counter(toc-counter, decimal-leading-zero);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  min-width: 28px;
+  letter-spacing: 0.04em;
+}
+
+.toc-list li:last-child a {
+  border-bottom: none;
+}
+
+.toc-list a:hover {
+  color: var(--text);
+  padding-left: 6px;
+}
+
+/* ── ABOUT GAME SECTION ─────────────────────────────────────── */
+.about-game {
+  padding-block: clamp(64px, 10vw, 110px);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 48px;
+  align-items: start;
+  margin-top: 8px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about-content p {
+  font-size: 0.97rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.about-content strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Aside metadata panel */
+.about-meta {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: sticky;
+  top: calc(var(--header-h) + 16px);
+  transition: border-color var(--speed);
+}
+
+.about-meta:hover {
+  border-color: var(--border-hover);
+}
+
+.about-meta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-3);
+}
+
+.meta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.meta-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.875rem;
+}
+
+.meta-list li:last-child {
+  border-bottom: none;
+}
+
+.meta-list strong {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.meta-list li > :not(strong) {
+  color: var(--text);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+/* ── ANDROID DOWNLOAD DETAIL TEXT ───────────────────────────── */
+.android-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+  max-width: 760px;
+}
+
+.android-detail p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.android-detail a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--speed);
+}
+
+.android-detail a:hover {
+  color: var(--accent-2);
+}
+
+/* ── INSTALLATION NOTE ──────────────────────────────────────── */
+.install-note {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 48px;
+  padding: 28px 32px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+}
+
+.install-note p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.install-note strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.install-note code {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.82rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.install-note a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--speed);
+}
+
+.install-note a:hover {
+  color: var(--accent-2);
+}
+
+/* ── FEATURE IMAGE (inside .features sections) ──────────────── */
+.features img,
+.about-game .section-sub + img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 40px;
+  background: var(--bg-3);
+}
+
+/* ── SECTION IMAGES (general) ───────────────────────────────── */
+section img:not(.qa-specs-card img):not(.about-meta img) {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-3);
+}
+
+/* ── RESPONSIVE — QUICK ANSWER ──────────────────────────────── */
+@media (max-width: 960px) {
+  .qa-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qa-specs-card {
+    position: static;
+    max-width: 100%;
+  }
+
+  .qa-specs-card img {
+    height: 160px;
+  }
+}
+
+/* ── RESPONSIVE — ABOUT GRID ────────────────────────────────── */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-meta {
+    position: static;
+  }
+
+  .about-meta img {
+    height: 220px;
+  }
+}
+
+/* ── RESPONSIVE — TOC ───────────────────────────────────────── */
+@media (max-width: 640px) {
+  .toc-list {
+    gap: 0;
+  }
+
+  .toc-list a {
+    padding: 12px 0;
+    font-size: 0.9rem;
+  }
+}
+
+/* ── RESPONSIVE — INSTALL NOTE ──────────────────────────────── */
+@media (max-width: 600px) {
+  .install-note {
+    padding: 20px;
+  }
+}
+
+/* ── RESPONSIVE — ANDROID DETAIL ───────────────────────────── */
+@media (max-width: 768px) {
+  .android-detail {
+    margin-top: 32px;
+    padding-top: 32px;
+  }
+}
+
+/* ── PLATFORM CARD — SINGLE WIDE (android section) ─────────── */
+#android-download .platform-grid {
+  grid-template-columns: 1fr;
+  max-width: 560px;
+}
+
+#android-download .platform-card .btn + .btn {
+  margin-top: -4px;
+}
+
+/* ── IOS / PC SECTION — 2-COL ONLY ─────────────────────────── */
+#ios-pc .platform-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 640px) {
+  #ios-pc .platform-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── STEP NUMBER ICON OVERRIDE ──────────────────────────────── */
+.feature-icon span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+/* ── VERSION STRIP — 4-BADGE LAYOUT TWEAK ──────────────────── */
+.version-badges:has(.version-badge-item:nth-child(4)) {
+  gap: 12px;
+}
+
+.version-badges:has(.version-badge-item:nth-child(4)) .version-badge-item {
+  padding: 16px 20px;
+  min-width: 90px;
+}
