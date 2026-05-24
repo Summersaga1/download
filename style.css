@@ -1744,3 +1744,186 @@ section img:not(.qa-specs-card img):not(.about-meta img) {
     height: 32px;
   }
 }
+
+
+
+/* ============================================================
+   download.css — Download page only
+   Requires style.css already loaded
+   ============================================================ */
+
+/* ── PAGE WRAPPER ───────────────────────────────────────────── */
+.download-page {
+  position: relative;
+  min-height: calc(100svh - var(--header-h));
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-block: clamp(60px, 10vh, 100px);
+}
+
+.download-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* ── INNER LAYOUT ───────────────────────────────────────────── */
+.download-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── INTRO BLOCK ────────────────────────────────────────────── */
+.dl-intro {
+  text-align: center;
+  max-width: 540px;
+}
+
+.dl-intro .hero-badge {
+  margin-bottom: 20px;
+}
+
+.dl-intro h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.dl-intro p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ── DOWNLOAD CARDS GRID ────────────────────────────────────── */
+.dl-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* ── INDIVIDUAL CARD ────────────────────────────────────────── */
+.dl-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: border-color var(--speed) var(--ease),
+              transform var(--speed) var(--ease),
+              box-shadow var(--speed) var(--ease),
+              background var(--speed) var(--ease);
+}
+
+.dl-card:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+}
+
+/* ── CARD TOP ROW ───────────────────────────────────────────── */
+.dl-card-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dl-card-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dl-card-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+/* ── ACTIONS ────────────────────────────────────────────────── */
+.dl-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+
+/* ── TRUST BAR ──────────────────────────────────────────────── */
+.dl-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.dl-trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  font-weight: 500;
+}
+
+.dl-trust svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ── BOTTOM NOTE ────────────────────────────────────────────── */
+.dl-note {
+  font-size: 0.85rem;
+  color: var(--text-faint);
+  text-align: center;
+}
+
+.dl-note a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--speed);
+}
+
+.dl-note a:hover {
+  color: var(--accent);
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .dl-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+
+  .dl-card {
+    padding: 24px 20px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dl-trust {
+    gap: 16px;
+  }
+
+  .dl-trust span {
+    font-size: 0.78rem;
+  }
+}
