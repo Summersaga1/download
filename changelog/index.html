@@ -68,26 +68,27 @@
 <body>
 
   <!-- HEADER -->
-  <header class="site-header" role="banner">
-    <div class="header-inner container">
-      <a href="/" class="logo" aria-label="SummerSagaMods Home">
+ <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Summertime Saga Download Home">
         <span class="logo-icon">&#x2B21;</span>
-        <span class="logo-text">SummerSaga<strong>Mods</strong></span>
+        <span class="logo-text">SummerSaga<em>Mods</em></span>
       </a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="/android/" class="nav-link">Android</a>
-        <a href="/ios/" class="nav-link">iOS</a>
-        <a href="/pc/" class="nav-link">PC</a>
-        <a href="/changelog/" class="nav-link active" aria-current="page">Changelog</a>
-        <a href="/download/" class="nav-link nav-cta">Download</a>
-      </nav>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
         <span></span><span></span><span></span>
       </button>
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/android/" class="nav-link">Android</a></li>
+          <li><a href="/ios/" class="nav-link">iOS</a></li>
+          <li><a href="/pc/" class="nav-link">PC</a></li>
+          <li><a href="/changelog/" class="nav-link">Changelog</a></li>
+          <li><a href="/download/" class="nav-cta">Download Now</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-
-  <main id="main-content">
 
     <!-- 1. HERO -->
     <section class="hero" aria-labelledby="hero-heading">
