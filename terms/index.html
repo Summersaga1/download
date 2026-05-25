@@ -3,9 +3,484 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Android Download</title>
+  <title>Terms of Use &mdash; SummerSagaMods</title>
+  <meta name="description" content="Terms of Use for download.summersagamods.com. Read the rules governing your use of this site, its content, and its download links.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://download.summersagamods.com/terms/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+  /* ── LEGAL PAGE STYLES ──────────────────────────────────── */
+  .legal-page {
+    position: relative;
+    overflow: hidden;
+    padding-block: clamp(60px, 10vh, 100px);
+    min-height: calc(100svh - var(--header-h));
+  }
+  .legal-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .legal-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin-inline: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  /* ── INTRO ──────────────────────────────────────────────── */
+  .legal-intro {
+    text-align: center;
+  }
+  .legal-intro .section-label {
+    margin-bottom: 14px;
+  }
+  .legal-intro h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+    font-weight: 700;
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+  .legal-intro p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+  .legal-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 6px 14px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    color: var(--text-faint);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .legal-meta-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+  /* ── CONTENT CARD ───────────────────────────────────────── */
+  .legal-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: clamp(24px, 5vw, 48px);
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    box-sizing: border-box;
+    transition: border-color var(--speed);
+  }
+  .legal-card:hover {
+    border-color: var(--border-hover);
+  }
+  /* ── SECTION BLOCK ──────────────────────────────────────── */
+  .legal-section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .legal-section + .legal-section {
+    padding-top: 36px;
+    border-top: 1px solid var(--border);
+  }
+  .legal-section-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .legal-section-num {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: var(--radius-sm);
+    background: var(--accent-soft);
+    border: 1px solid rgba(249,115,22,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+  }
+  .legal-section h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin: 0;
+  }
+  .legal-section p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin: 0;
+  }
+  .legal-section ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .legal-section ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+  .legal-section ul li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-top: 9px;
+  }
+  .legal-section a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color var(--speed);
+  }
+  .legal-section a:hover {
+    color: var(--accent-2);
+  }
+  /* ── HIGHLIGHT BOX ──────────────────────────────────────── */
+  .legal-highlight {
+    padding: 16px 20px;
+    background: var(--bg-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    box-sizing: border-box;
+  }
+  .legal-highlight strong {
+    color: var(--text);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  /* ── CONTACT CALLOUT ────────────────────────────────────── */
+  .legal-contact-callout {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-sizing: border-box;
+  }
+  .legal-callout-icon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    background: var(--accent-soft);
+    border: 1px solid rgba(249,115,22,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+  }
+  .legal-callout-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .legal-callout-text strong {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  .legal-callout-text span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  .legal-callout-text a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color var(--speed);
+  }
+  .legal-callout-text a:hover {
+    color: var(--accent-2);
+  }
+  /* ── RESPONSIVE ─────────────────────────────────────────── */
+  @media (max-width: 640px) {
+    .legal-card { padding: 22px 18px; gap: 28px; }
+    .legal-section + .legal-section { padding-top: 28px; }
+    .legal-contact-callout { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-width: 400px) {
+    .legal-section-heading { flex-direction: column; align-items: flex-start; gap: 8px; }
+  }
+  </style>
 </head>
 <body>
-  <h1>Android Download</h1>
+
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Summertime Saga Download Home">
+        <span class="logo-icon">&#x2B21;</span>
+        <span class="logo-text">SummerSaga<em>Mods</em></span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/android/" class="nav-link">Android</a></li>
+          <li><a href="/ios/" class="nav-link">iOS</a></li>
+          <li><a href="/pc/" class="nav-link">PC</a></li>
+          <li><a href="/changelog/" class="nav-link">Changelog</a></li>
+          <li><a href="/download/" class="nav-cta">Download Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="legal-page" aria-labelledby="terms-heading">
+
+      <div class="legal-bg" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-glow glow-1"></div>
+        <div class="hero-glow glow-2"></div>
+        <div class="hero-glow glow-3"></div>
+      </div>
+
+      <div class="container">
+        <div class="legal-inner">
+
+          <div class="legal-intro">
+            <div class="section-label">Legal</div>
+            <h1 id="terms-heading">Terms of <span class="gradient-text">Use</span></h1>
+            <p>The rules that govern your access to and use of this website and its content.</p>
+            <div class="legal-meta">
+              <span class="legal-meta-dot" aria-hidden="true"></span>
+              Last updated: May 2026
+            </div>
+          </div>
+
+          <div class="legal-card">
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">01</div>
+                <h2>Acceptance of Terms</h2>
+              </div>
+              <p>By accessing or using download.summersagamods.com (the &ldquo;Site&rdquo;), you confirm that you have read, understood, and agree to be bound by these Terms of Use (&ldquo;Terms&rdquo;). If you do not agree to these Terms in full, you must stop using the Site immediately.</p>
+              <p>We reserve the right to modify these Terms at any time. Changes take effect as soon as they are posted. Continued use of the Site after any modification constitutes your acceptance of the revised Terms.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">02</div>
+                <h2>Age Requirement</h2>
+              </div>
+              <div class="legal-highlight">
+                <strong>This Site is strictly for users aged 18 and over.</strong> The content available for download is rated 18+ and contains adult material. By using this Site you confirm that you are at least 18 years of age, or the age of majority in your jurisdiction if that is higher.
+              </div>
+              <p>If you are under 18, you are not permitted to access or use this Site under any circumstances. We do not knowingly provide services to minors. If we become aware that a minor has accessed the Site, we will take appropriate steps to restrict that access.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">03</div>
+                <h2>Nature of This Site</h2>
+              </div>
+              <p>This Site is an independent fan resource. It is not affiliated with, endorsed by, or in any way officially connected to Kompas Productions, the official developers of Summertime Saga, or any of their subsidiaries or affiliates. The official Summertime Saga website can be found independently.</p>
+              <p>The Site provides installation guides, version information, and links to third-party file-hosting services. We do not host any game files on our own servers.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">04</div>
+                <h2>Permitted Use</h2>
+              </div>
+              <p>You may use the Site for personal, non-commercial purposes only. Specifically, you may:</p>
+              <ul>
+                <li>Read installation guides and reference documentation on this Site.</li>
+                <li>Follow download links to third-party file hosts for personal use.</li>
+                <li>Share links to pages on this Site, provided you do not misrepresent their content.</li>
+              </ul>
+              <p>You may not use the Site in any manner that could damage, disable, overburden, or impair it, or interfere with any other party&rsquo;s use of the Site.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">05</div>
+                <h2>Prohibited Use</h2>
+              </div>
+              <p>The following are expressly prohibited:</p>
+              <ul>
+                <li>Scraping, crawling, or systematically harvesting content from this Site without written permission.</li>
+                <li>Reproducing, republishing, or redistributing the written guides or page content on another website without attribution and a link back to the original page.</li>
+                <li>Using automated tools to submit false or misleading contact enquiries.</li>
+                <li>Attempting to probe, scan, or test the vulnerability of the Site or any system connected to it.</li>
+                <li>Accessing the Site in violation of any applicable law or regulation.</li>
+              </ul>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">06</div>
+                <h2>Intellectual Property</h2>
+              </div>
+              <p>All original written content on this Site &mdash; including guides, descriptions, and editorial copy &mdash; is the property of download.summersagamods.com and is protected by applicable copyright law.</p>
+              <p>The game &ldquo;Summertime Saga&rdquo; and all associated characters, artwork, and assets are the intellectual property of Kompas Productions. This Site makes no claim of ownership over any game content. Any references to the game are made for informational purposes only under the principle of nominative fair use.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">07</div>
+                <h2>Third-Party Links and Services</h2>
+              </div>
+              <p>This Site contains links to third-party websites and file-hosting services, including GoFile.io. These links are provided for convenience only. We have no control over the content, availability, or practices of third-party sites and accept no responsibility for them.</p>
+              <p>Clicking a third-party link means you leave our Site and are subject to the terms and privacy policy of that third party. We strongly encourage you to review those policies before downloading or using any external service.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">08</div>
+                <h2>Disclaimer of Warranties</h2>
+              </div>
+              <div class="legal-highlight">
+                <strong>The Site is provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis without warranties of any kind</strong>, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not warrant that the Site will be uninterrupted, error-free, or free of viruses or other harmful components.
+              </div>
+              <p>You use the Site and any files downloaded through it entirely at your own risk. We make no guarantees about the accuracy, completeness, or suitability of any information on the Site.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">09</div>
+                <h2>Limitation of Liability</h2>
+              </div>
+              <p>To the fullest extent permitted by applicable law, download.summersagamods.com and its operators shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or in connection with your use of, or inability to use, the Site or any content or services available through it.</p>
+              <p>This includes, without limitation, damages for loss of profits, data, goodwill, or other intangible losses, even if we have been advised of the possibility of such damages.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">10</div>
+                <h2>DMCA and Copyright Concerns</h2>
+              </div>
+              <p>We respect intellectual property rights. If you believe that content on this Site infringes your copyright, please review our dedicated <a href="/dmca/">DMCA Policy</a> for instructions on how to submit a takedown notice. We will respond to valid notices promptly.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">11</div>
+                <h2>Governing Law</h2>
+              </div>
+              <p>These Terms shall be governed by and construed in accordance with applicable law. Any dispute arising out of or in connection with these Terms that cannot be resolved informally will be subject to the exclusive jurisdiction of the relevant courts.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">12</div>
+                <h2>Contact</h2>
+              </div>
+              <p>If you have any questions about these Terms, please contact us at <a href="mailto:info@summersagamods.com">info@summersagamods.com</a> or visit our <a href="/contact/">Contact page</a>.</p>
+            </div>
+
+            <div class="legal-contact-callout">
+              <div class="legal-callout-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div class="legal-callout-text">
+                <strong>Copyright or legal concern?</strong>
+                <span>Visit our <a href="/dmca/">DMCA Policy</a> for takedown procedures, or email <a href="mailto:info@summersagamods.com">info@summersagamods.com</a> directly.</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="Summertime Saga Download Home">
+            <span class="logo-icon">&#x2B21;</span>
+            <span class="logo-text">SummerSaga<em>Mods</em></span>
+          </a>
+          <p>The fastest and cleanest source for Summertime Saga downloads across Android, iOS, and PC.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Platform pages">
+          <strong>Platforms</strong>
+          <ul>
+            <li><a href="/android/">Android Download</a></li>
+            <li><a href="/ios/">iOS Download</a></li>
+            <li><a href="/pc/">PC Download</a></li>
+            <li><a href="/download/">All Downloads</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav" aria-label="Site pages">
+          <strong>Info</strong>
+          <ul>
+            <li><a href="/changelog/">Changelog</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav" aria-label="Legal pages">
+          <strong>Legal</strong>
+          <ul>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms of Use</a></li>
+            <li><a href="/dmca/">DMCA</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span id="year"></span> download.summersagamods.com &mdash; All rights reserved.</p>
+        <p class="footer-disclaimer">This site is a fan resource and is not affiliated with or endorsed by the official Summertime Saga developers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
 </body>
 </html>
