@@ -1,69 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Homepage — highest priority, crawled daily -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://download.summersagamods.com/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
   </url>
 
-  <!-- Core download pages — high priority, weekly updates -->
   <url>
     <loc>https://download.summersagamods.com/android/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
+
   <url>
     <loc>https://download.summersagamods.com/ios/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://download.summersagamods.com/pc/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
 
-  <!-- Changelog — updated with each release -->
+  <url>
+   <loc>https://download.summersagamods.com/pc/</loc>
+  </url>
+
   <url>
     <loc>https://download.summersagamods.com/changelog/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
 
-  <!-- Legal & support pages — low change frequency -->
   <url>
     <loc>https://download.summersagamods.com/privacy-policy/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
   </url>
+
   <url>
     <loc>https://download.summersagamods.com/terms/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
   </url>
+
   <url>
     <loc>https://download.summersagamods.com/dmca/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
   </url>
+
   <url>
     <loc>https://download.summersagamods.com/contact/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
   </url>
 
 </urlset>
