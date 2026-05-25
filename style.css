@@ -1929,6 +1929,10 @@ section img:not(.qa-specs-card img):not(.about-meta img) {
 }
 
 
+
+
+
+
 /* ============================================================
    android.css — Android page specific additions
    Requires style.css + sections-addon.css already loaded
@@ -2114,5 +2118,18 @@ section img:not(.qa-specs-card img):not(.about-meta img) {
   .req-icon {
     width: 32px;
     height: 32px;
+  }
+}
+
+/* ── 2-COLUMN FEATURES GRID OVERRIDE ───────────────────────── */
+/* Used for 4-step sections (installation, updating)            */
+/* Overrides the default 3-col layout from style.css            */
+.features-grid.features-grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 640px) {
+  .features-grid.features-grid--2col {
+    grid-template-columns: 1fr;
   }
 }
