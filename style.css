@@ -1927,3 +1927,192 @@ section img:not(.qa-specs-card img):not(.about-meta img) {
     font-size: 0.78rem;
   }
 }
+
+
+/* ============================================================
+   android.css — Android page specific additions
+   Requires style.css + sections-addon.css already loaded
+   ============================================================ */
+
+/* ── UNKNOWN SOURCES NOTE (inside platform card) ───────────── */
+.sources-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  padding: 14px 16px;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-top: 4px;
+}
+
+.sources-note strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ── SAVE PATH (reused from pc.css — scoped here too) ───────── */
+.save-paths {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0 28px;
+}
+
+.save-path-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  flex-wrap: wrap;
+  transition: border-color var(--speed);
+}
+
+.save-path-item:hover {
+  border-color: var(--border-hover);
+}
+
+.save-path-os {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  min-width: 72px;
+  flex-shrink: 0;
+}
+
+.save-path-item code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+  color: var(--text);
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+  word-break: break-all;
+}
+
+/* ── REQ CHECKLIST (also in ios.css / pc.css) ───────────────── */
+.req-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 8px;
+}
+
+.req-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--speed), background var(--speed);
+}
+
+.req-item:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+}
+
+.req-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-top: 1px;
+}
+
+.req-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.req-detail strong {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.req-detail span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── FAQ / INSTALL NOTE CODE + LINKS ────────────────────────── */
+.faq-answer code,
+.install-note code,
+.about-content code,
+.feature-item code {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  word-break: break-all;
+}
+
+.install-note a,
+.about-content a,
+.feature-item p a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--speed);
+}
+
+.install-note a:hover,
+.about-content a:hover,
+.feature-item p a:hover {
+  color: var(--accent-2);
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .save-path-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .save-path-item code {
+    width: 100%;
+    font-size: 0.73rem;
+  }
+
+  .sources-note {
+    font-size: 0.78rem;
+  }
+
+  .req-item {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .req-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
