@@ -3,9 +3,441 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Android Download</title>
+  <title>Privacy Policy &mdash; SummerSagaMods</title>
+  <meta name="description" content="Privacy Policy for download.summersagamods.com. Learn what data we collect, how we use it, and your rights as a visitor.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+  /* ── LEGAL PAGE STYLES ──────────────────────────────────── */
+  .legal-page {
+    position: relative;
+    overflow: hidden;
+    padding-block: clamp(60px, 10vh, 100px);
+    min-height: calc(100svh - var(--header-h));
+  }
+  .legal-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .legal-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin-inline: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  /* ── INTRO ──────────────────────────────────────────────── */
+  .legal-intro {
+    text-align: center;
+  }
+  .legal-intro .section-label {
+    margin-bottom: 14px;
+  }
+  .legal-intro h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+    font-weight: 700;
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+  .legal-intro p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+  .legal-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 6px 14px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    color: var(--text-faint);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .legal-meta-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+  /* ── CONTENT CARD ───────────────────────────────────────── */
+  .legal-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: clamp(24px, 5vw, 48px);
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    box-sizing: border-box;
+    transition: border-color var(--speed);
+  }
+  .legal-card:hover {
+    border-color: var(--border-hover);
+  }
+  /* ── SECTION BLOCK ──────────────────────────────────────── */
+  .legal-section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .legal-section + .legal-section {
+    padding-top: 36px;
+    border-top: 1px solid var(--border);
+  }
+  .legal-section-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .legal-section-num {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: var(--radius-sm);
+    background: var(--accent-soft);
+    border: 1px solid rgba(249,115,22,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+  }
+  .legal-section h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin: 0;
+  }
+  .legal-section p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin: 0;
+  }
+  .legal-section ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .legal-section ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+  .legal-section ul li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-top: 9px;
+  }
+  .legal-section a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color var(--speed);
+  }
+  .legal-section a:hover {
+    color: var(--accent-2);
+  }
+  /* ── CONTACT CALLOUT ────────────────────────────────────── */
+  .legal-contact-callout {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-sizing: border-box;
+  }
+  .legal-callout-icon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    background: var(--accent-soft);
+    border: 1px solid rgba(249,115,22,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+  }
+  .legal-callout-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .legal-callout-text strong {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  .legal-callout-text span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  .legal-callout-text a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color var(--speed);
+  }
+  .legal-callout-text a:hover {
+    color: var(--accent-2);
+  }
+  /* ── RESPONSIVE ─────────────────────────────────────────── */
+  @media (max-width: 640px) {
+    .legal-card { padding: 22px 18px; gap: 28px; }
+    .legal-section + .legal-section { padding-top: 28px; }
+    .legal-contact-callout { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-width: 400px) {
+    .legal-section-heading { flex-direction: column; align-items: flex-start; gap: 8px; }
+  }
+  </style>
 </head>
 <body>
-  <h1>Android Download</h1>
+
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Summertime Saga Download Home">
+        <span class="logo-icon">&#x2B21;</span>
+        <span class="logo-text">SummerSaga<em>Mods</em></span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/android/" class="nav-link">Android</a></li>
+          <li><a href="/ios/" class="nav-link">iOS</a></li>
+          <li><a href="/pc/" class="nav-link">PC</a></li>
+          <li><a href="/changelog/" class="nav-link">Changelog</a></li>
+          <li><a href="/download/" class="nav-cta">Download Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="legal-page" aria-labelledby="privacy-heading">
+
+      <div class="legal-bg" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-glow glow-1"></div>
+        <div class="hero-glow glow-2"></div>
+        <div class="hero-glow glow-3"></div>
+      </div>
+
+      <div class="container">
+        <div class="legal-inner">
+
+          <div class="legal-intro">
+            <div class="section-label">Legal</div>
+            <h1 id="privacy-heading">Privacy <span class="gradient-text">Policy</span></h1>
+            <p>How we collect, use, and protect your information when you visit this site.</p>
+            <div class="legal-meta">
+              <span class="legal-meta-dot" aria-hidden="true"></span>
+              Last updated: January 2025
+            </div>
+          </div>
+
+          <div class="legal-card">
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">01</div>
+                <h2>Overview</h2>
+              </div>
+              <p>This Privacy Policy applies to download.summersagamods.com (the &ldquo;Site&rdquo;). It describes the types of information we may collect from you when you visit the Site, how that information is used, and the limited circumstances under which it may be shared. By using the Site, you agree to the practices described here.</p>
+              <p>We do not sell, rent, or trade your personal information to any third party. We have no user accounts, no registration forms, and no purchase flows &mdash; the Site exists solely to provide download links and installation guides.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">02</div>
+                <h2>Information We Collect</h2>
+              </div>
+              <p>We collect only minimal, non-identifying technical data that is standard for any website operation:</p>
+              <ul>
+                <li><strong>Log data</strong> &mdash; your browser type, operating system, referring URL, pages visited, and the date and time of your request. This data is generated automatically by our hosting infrastructure (Cloudflare) and is never linked to any individual identity.</li>
+                <li><strong>IP addresses</strong> &mdash; recorded transiently by Cloudflare for security, DDoS protection, and abuse prevention. We do not store or process IP addresses ourselves.</li>
+                <li><strong>Cookies</strong> &mdash; Cloudflare sets a small number of technical cookies necessary for security and performance. We do not set any tracking or advertising cookies of our own.</li>
+                <li><strong>Email address</strong> &mdash; only if you contact us directly via the address listed on our <a href="/contact/">Contact</a> page. Email addresses are used solely to respond to your enquiry and are never added to any mailing list.</li>
+              </ul>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">03</div>
+                <h2>How We Use Your Information</h2>
+              </div>
+              <p>The limited data described above is used only for the following purposes:</p>
+              <ul>
+                <li>Delivering and rendering the Site correctly in your browser.</li>
+                <li>Diagnosing technical errors, broken links, or server-side problems.</li>
+                <li>Protecting the Site against malicious traffic and abuse via Cloudflare.</li>
+                <li>Responding to enquiries sent directly to our contact email.</li>
+              </ul>
+              <p>We do not use any data for advertising, profiling, re-targeting, or any form of behavioural tracking.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">04</div>
+                <h2>Third-Party Services</h2>
+              </div>
+              <p>The Site uses the following third-party services. Each operates under its own privacy policy.</p>
+              <ul>
+                <li><strong>Cloudflare</strong> &mdash; DNS, CDN, and security layer. Cloudflare processes network-level data to protect and accelerate the Site. See the <a href="https://www.cloudflare.com/privacypolicy/" rel="nofollow noopener noreferrer" target="_blank">Cloudflare Privacy Policy</a>.</li>
+                <li><strong>Google Fonts</strong> &mdash; the Site loads two font families (Rajdhani and DM Sans) directly from Google Fonts servers. This request includes your IP address and browser user-agent. See the <a href="https://policies.google.com/privacy" rel="nofollow noopener noreferrer" target="_blank">Google Privacy Policy</a>.</li>
+                <li><strong>GoFile.io</strong> &mdash; download files are hosted on GoFile. When you click a download link you are transferred to GoFile&rsquo;s servers, which operate under their own terms. We have no visibility into data GoFile collects from those interactions.</li>
+              </ul>
+              <p>Beyond these three services, no analytics platform, advertising network, or social media tracker is loaded on any page of this Site.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">05</div>
+                <h2>Cookies</h2>
+              </div>
+              <p>This Site does not use first-party cookies for analytics or advertising. Cloudflare may set a <code style="background:var(--bg-3);padding:2px 6px;border-radius:4px;font-size:0.88em;color:var(--text);">__cf_bm</code> cookie on your device to distinguish humans from bots. This cookie is strictly functional, expires within 30 minutes of inactivity, and contains no personal information.</p>
+              <p>You can instruct your browser to refuse all cookies or to alert you when a cookie is being set. Refusing the Cloudflare security cookie may affect your ability to access certain pages.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">06</div>
+                <h2>Data Retention</h2>
+              </div>
+              <p>We do not maintain any user database. Log data retained by Cloudflare is subject to Cloudflare&rsquo;s own retention schedules, typically no longer than 30 days for raw request logs. Email correspondence sent to our contact address is retained only as long as necessary to handle your enquiry, after which it is deleted.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">07</div>
+                <h2>Your Rights</h2>
+              </div>
+              <p>Depending on where you are located, you may have rights under applicable data protection law, including the right to access, correct, or request deletion of any personal data we hold about you. Given that we hold virtually no personal data, most requests will be satisfied by confirming that no such data exists on our side.</p>
+              <p>To exercise any of these rights, or if you have questions about your data, contact us at <a href="mailto:info@summersagamods.com">info@summersagamods.com</a>. We will respond within 30 days.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">08</div>
+                <h2>Children&rsquo;s Privacy</h2>
+              </div>
+              <p>This Site distributes content rated 18+. It is not directed at children under the age of 18, and we do not knowingly collect any information from anyone under 18. If you are under 18, do not use this Site. If you believe a minor has provided us with personal information, contact us immediately so we can remove it.</p>
+            </div>
+
+            <div class="legal-section">
+              <div class="legal-section-heading">
+                <div class="legal-section-num" aria-hidden="true">09</div>
+                <h2>Changes to This Policy</h2>
+              </div>
+              <p>We may update this Privacy Policy from time to time. When we do, the &ldquo;Last updated&rdquo; date at the top of this page will change. Continued use of the Site after any change constitutes acceptance of the revised policy. We encourage you to review this page periodically.</p>
+            </div>
+
+            <div class="legal-contact-callout">
+              <div class="legal-callout-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="legal-callout-text">
+                <strong>Privacy questions or requests?</strong>
+                <span>Email us at <a href="mailto:info@summersagamods.com">info@summersagamods.com</a> or visit our <a href="/contact/">Contact page</a>.</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="Summertime Saga Download Home">
+            <span class="logo-icon">&#x2B21;</span>
+            <span class="logo-text">SummerSaga<em>Mods</em></span>
+          </a>
+          <p>The fastest and cleanest source for Summertime Saga downloads across Android, iOS, and PC.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Platform pages">
+          <strong>Platforms</strong>
+          <ul>
+            <li><a href="/android/">Android Download</a></li>
+            <li><a href="/ios/">iOS Download</a></li>
+            <li><a href="/pc/">PC Download</a></li>
+            <li><a href="/download/">All Downloads</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav" aria-label="Site pages">
+          <strong>Info</strong>
+          <ul>
+            <li><a href="/changelog/">Changelog</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav" aria-label="Legal pages">
+          <strong>Legal</strong>
+          <ul>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms of Use</a></li>
+            <li><a href="/dmca/">DMCA</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span id="year"></span> download.summersagamods.com &mdash; All rights reserved.</p>
+        <p class="footer-disclaimer">This site is a fan resource and is not affiliated with or endorsed by the official Summertime Saga developers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
 </body>
 </html>
