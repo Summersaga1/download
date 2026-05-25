@@ -2386,3 +2386,382 @@ section img:not(.qa-specs-card img):not(.about-meta img) {
     gap: 12px;
   }
 }
+
+
+
+
+
+/* ============================================================
+   changelog.css — Version history timeline page
+   Scoped prefix: .cl-
+   ============================================================ */
+
+/* ── Timeline track ── */
+.changelog-timeline {
+  padding: 5rem 0 4rem;
+}
+
+.cl-track {
+  position: relative;
+  margin-top: 3rem;
+  padding-left: 2rem;
+}
+
+/* Vertical spine */
+.cl-track::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent),
+    rgba(249, 115, 22, 0.3) 60%,
+    transparent
+  );
+}
+
+/* ── Timeline entry ── */
+.cl-entry {
+  position: relative;
+  display: flex;
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+  align-items: flex-start;
+}
+
+.cl-entry:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Dot ── */
+.cl-dot {
+  position: relative;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 50%;
+  margin-top: 1.35rem;
+  margin-left: -2rem;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.cl-minor .cl-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--text-faint);
+  margin-top: 1.5rem;
+}
+
+/* Pulse ring on major entries */
+.cl-dot-ring {
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent);
+  opacity: 0.45;
+  animation: cl-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes cl-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.45; }
+  50%       { transform: scale(1.6); opacity: 0; }
+}
+
+/* ── Card ── */
+.cl-card {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cl-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 0 0 1px var(--accent-glow), 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.cl-major .cl-card {
+  border-color: rgba(249, 115, 22, 0.18);
+}
+
+/* ── Card header ── */
+.cl-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1.1rem 1.4rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.cl-version-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.cl-version {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.cl-date {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-faint);
+  letter-spacing: 0.04em;
+}
+
+/* ── Badges ── */
+.cl-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cl-badge-current {
+  background: var(--accent);
+  color: #fff;
+}
+
+.cl-badge-major {
+  background: rgba(249, 115, 22, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(249, 115, 22, 0.25);
+}
+
+.cl-badge-patch {
+  background: rgba(129, 140, 248, 0.1);
+  color: #818cf8;
+  border: 1px solid rgba(129, 140, 248, 0.2);
+}
+
+.cl-badge-legacy {
+  background: rgba(139, 144, 158, 0.1);
+  color: var(--text-muted);
+  border: 1px solid rgba(139, 144, 158, 0.18);
+}
+
+/* ── Card title ── */
+.cl-card-title {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text);
+  padding: 0.85rem 1.4rem 0;
+  line-height: 1.35;
+}
+
+/* ── Two-column body ── */
+.cl-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 0.75rem 1.4rem 1.1rem;
+}
+
+.cl-col {
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.cl-col:last-child {
+  padding-right: 0;
+  padding-left: 1rem;
+  border-left: 1px solid var(--border);
+}
+
+.cl-col-label {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  margin: 0 0 0.5rem;
+}
+
+.cl-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cl-list li {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.cl-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+/* ── Card footer ── */
+.cl-footer {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding: 0.9rem 1.4rem;
+  border-top: 1px solid var(--border);
+  background: rgba(255,255,255,0.015);
+}
+
+.cl-size {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}
+
+.cl-size a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.cl-size a:hover {
+  text-decoration: underline;
+}
+
+/* install-note inside cl-footer */
+.cl-footer .install-note {
+  margin: 0;
+  font-size: 0.83rem;
+}
+
+/* ── Save compatibility list ── */
+.cl-compat-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cl-compat-list li {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding-left: 1.1rem;
+  position: relative;
+  line-height: 1.55;
+}
+
+.cl-compat-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+/* version-badge-item overrides for this page */
+.vbi-num {
+  display: block;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.vbi-label {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .cl-body {
+    grid-template-columns: 1fr;
+  }
+
+  .cl-col:last-child {
+    padding-left: 0;
+    padding-top: 0.75rem;
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .cl-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .cl-track {
+    padding-left: 1.25rem;
+  }
+
+  .cl-entry {
+    gap: 1.1rem;
+  }
+
+  .cl-card-title {
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem 0;
+  }
+
+  .cl-card-header {
+    padding: 0.85rem 1rem 0.7rem;
+  }
+
+  .cl-body {
+    padding: 0.6rem 1rem 0.9rem;
+  }
+
+  .cl-footer {
+    padding: 0.75rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .cl-version-row {
+    gap: 0.4rem;
+  }
+
+  .cl-version {
+    font-size: 1rem;
+  }
+
+  .cl-badge {
+    font-size: 0.65rem;
+  }
+}
