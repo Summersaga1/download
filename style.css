@@ -2133,3 +2133,256 @@ section img:not(.qa-specs-card img):not(.about-meta img) {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+/* ============================================================
+   contact.css — Contact page only
+   Requires style.css already loaded
+   ============================================================ */
+
+/* ── PAGE WRAPPER ───────────────────────────────────────────── */
+.contact-page {
+  position: relative;
+  min-height: calc(100svh - var(--header-h));
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-block: clamp(60px, 10vh, 100px);
+}
+
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* ── INNER LAYOUT ───────────────────────────────────────────── */
+.contact-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+/* ── INTRO ──────────────────────────────────────────────────── */
+.contact-intro {
+  text-align: center;
+}
+
+.contact-intro .section-label {
+  margin-bottom: 14px;
+}
+
+.contact-intro h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.contact-intro p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+/* ── EMAIL CARD ─────────────────────────────────────────────── */
+.contact-card {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: border-color var(--speed);
+}
+
+.contact-card:hover {
+  border-color: var(--border-hover);
+}
+
+.contact-card-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.contact-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.contact-email {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: color var(--speed);
+}
+
+.contact-email:hover {
+  color: var(--accent-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-divider {
+  height: 1px;
+  background: var(--border);
+  width: 100%;
+}
+
+.contact-btn {
+  font-size: 1rem;
+}
+
+/* ── TOPIC CARDS ────────────────────────────────────────────── */
+.contact-topics {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.contact-topic {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--speed), background var(--speed);
+}
+
+.contact-topic:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+}
+
+.topic-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-top: 1px;
+}
+
+.topic-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.topic-detail strong {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.topic-detail span {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* ── SELF-HELP NOTE ─────────────────────────────────────────── */
+.contact-selfhelp {
+  width: 100%;
+  padding: 20px 24px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.contact-selfhelp p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.contact-selfhelp a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--speed);
+}
+
+.contact-selfhelp a:hover {
+  color: var(--accent-2);
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 24px 20px;
+  }
+
+  .contact-email {
+    font-size: 1rem;
+  }
+
+  .contact-topics {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-topic {
+    padding: 16px 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-card-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
