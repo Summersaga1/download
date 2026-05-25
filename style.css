@@ -2765,3 +2765,253 @@ section img:not(.qa-specs-card img):not(.about-meta img) {
     font-size: 0.65rem;
   }
 }
+
+
+
+
+/* ============================================================
+   dmca.css — DMCA legal page
+   Scoped prefix: .legal-
+   ============================================================ */
+
+/* ── Page hero ── */
+.legal-hero {
+  padding: 4rem 0 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-hero .section-title {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Body wrapper ── */
+.legal-body {
+  padding: 3.5rem 0 5rem;
+}
+
+/* ── Two-column grid: TOC + prose ── */
+.legal-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* ── Sidebar TOC ── */
+.legal-toc {
+  position: sticky;
+  top: calc(var(--header-h) + 1.5rem);
+}
+
+.legal-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  counter-reset: legal-toc;
+}
+
+.legal-toc-list li {
+  counter-increment: legal-toc;
+}
+
+.legal-toc-list a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+}
+
+.legal-toc-list a::before {
+  content: counter(legal-toc, decimal-leading-zero);
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 0.7rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.legal-toc-list a:hover {
+  color: var(--text);
+  background: var(--accent-soft);
+}
+
+/* ── Prose ── */
+.legal-prose {
+  max-width: 720px;
+}
+
+.legal-prose section {
+  padding-bottom: 2.75rem;
+  margin-bottom: 2.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-prose section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.legal-prose h2 {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--text);
+  margin: 0 0 1rem;
+  scroll-margin-top: calc(var(--header-h) + 1.5rem);
+}
+
+.legal-prose p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.925rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin: 0 0 1rem;
+}
+
+.legal-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-prose a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.legal-prose a:hover {
+  text-decoration: underline;
+}
+
+/* ── Ordered list ── */
+.legal-ol {
+  padding: 0;
+  margin: 0.75rem 0 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.legal-ol li {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.925rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  padding-left: 0.3rem;
+}
+
+.legal-ol li::marker {
+  color: var(--accent);
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+}
+
+/* ── Contact block ── */
+.legal-contact-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 1.25rem 0;
+}
+
+.lcb-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.8rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.875rem;
+  color: var(--text);
+}
+
+.lcb-row:last-child {
+  border-bottom: none;
+}
+
+.lcb-label {
+  flex-shrink: 0;
+  width: 110px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-faint);
+}
+
+.lcb-row a {
+  color: var(--accent);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.lcb-row a:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .legal-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .legal-toc {
+    position: static;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+  }
+
+  .legal-toc-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .legal-toc-list a {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .legal-hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .legal-body {
+    padding: 2.5rem 0 4rem;
+  }
+
+  .legal-prose h2 {
+    font-size: 1.15rem;
+  }
+
+  .lcb-label {
+    width: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lcb-row {
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .lcb-label {
+    width: auto;
+  }
+}
