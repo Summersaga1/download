@@ -177,3 +177,43 @@
   });
 
 })();
+
+
+/* ── TELEGRAM FLOATING PILL ───────────────────────────── */
+
+(function(){
+
+const pill=document.getElementById("tgFloatingPill");
+const closeBtn=document.getElementById("tgCloseBtn");
+
+if(!pill || !closeBtn){
+return;
+}
+
+const hiddenUntil=localStorage.getItem("tgHideUntil");
+const now=Date.now();
+
+if(hiddenUntil && now < parseInt(hiddenUntil)){
+return;
+}
+
+setTimeout(function(){
+pill.style.display="flex";
+},7000);
+
+closeBtn.addEventListener("click",function(){
+
+pill.style.display="none";
+
+const hideTime=Date.now() + (12 * 60 * 60 * 1000);
+
+localStorage.setItem("tgHideUntil",hideTime);
+
+});
+
+})();
+
+
+
+
+
